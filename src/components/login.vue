@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="header">1</div>
-    <div class="section"></div>
+    <div class="section">1</div>
     <div class="footer"></div>
   </div>
 </template>
