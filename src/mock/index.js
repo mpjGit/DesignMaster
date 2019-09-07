@@ -1,4 +1,7 @@
 const Mock = require('mockjs');
-var data = Mock.mock({
+
+const data = Mock.mock({
 
 });
+
+export default data;
