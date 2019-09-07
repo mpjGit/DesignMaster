@@ -1,6 +1,6 @@
 # icondesigner
 
-> A Vue.js project
+> A Designer WebApp
 
 ## Build Setup
 
