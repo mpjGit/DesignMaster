@@ -1,24 +1,30 @@
 <template>
   <div class="container">
-    <div class="header"></div>
+    <div class="header">{{ users }}</div>
     <div class="section"></div>
-    <div class="footer"></div>
+    <div class="footer">
+      <button @click="setUsers">GetUsersData</button>
+    </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios';
+import { mapActions, mapGetters, mapState } from 'vuex';
 
 export default {
   name: 'Login',
-  axios,
   data() {
     return {
       name: 'Login',
     };
   },
+  computed: {
+    ...mapState({
+      users: 'users',
+    }),
+  },
   methods: {
-
+    ...mapActions(['setUsers']),
   },
   components: {
 
