@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="header">{{ users && users.data.list[10] }}</div>
+    <com-header :buttons="buttons"></com-header>
     <div class="section"></div>
     <div class="footer">
       <button @click="GetUsersData">GetUsersData</button>
@@ -10,12 +10,17 @@
 
 <script>
 import { mapState } from 'vuex';
+import comHeader from './comHeader';
 
 export default {
   name: 'Login',
   data() {
     return {
       name: 'Login',
+      buttons: [
+        { name: 'Help' },
+        { name: 'register' },
+      ],
     };
   },
   computed: {
@@ -29,7 +34,7 @@ export default {
     },
   },
   components: {
-
+    comHeader,
   },
 };
 </script>
