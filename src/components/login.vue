@@ -3,13 +3,13 @@
     <div class="header">{{ users }}</div>
     <div class="section"></div>
     <div class="footer">
-      <button @click="setUsers">GetUsersData</button>
+      <button @click="GetUsersData">GetUsersData</button>
     </div>
   </div>
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex';
+import { mapState } from 'vuex';
 
 export default {
   name: 'Login',
@@ -24,7 +24,9 @@ export default {
     }),
   },
   methods: {
-    ...mapActions(['setUsers']),
+    GetUsersData() {
+      this.$store.dispatch('getUsers', '/users');
+    },
   },
   components: {
 

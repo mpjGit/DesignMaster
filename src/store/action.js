@@ -1,7 +1,7 @@
 import Vue from 'vue';
 
 const action = {
-  setUsers(context, url) {
+  getUsers(context, url) {
     Vue.prototype.$ajax({
       method: 'get',
       url,
