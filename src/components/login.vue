@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="header">{{ users }}</div>
+    <div class="header">{{ users && users.data.list[10] }}</div>
     <div class="section"></div>
     <div class="footer">
       <button @click="GetUsersData">GetUsersData</button>
