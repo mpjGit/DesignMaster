@@ -18,8 +18,8 @@ export default {
     return {
       name: 'Login',
       buttons: [
-        { name: 'Help' },
-        { name: 'register' },
+        { text: 'Help', type: 'text' },
+        { text: 'register', type: 'success' },
       ],
     };
   },
