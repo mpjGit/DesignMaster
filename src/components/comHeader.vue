@@ -45,6 +45,5 @@ export default {
         left 60px
         top ((55 - 36) / 2)px
         margin 0 10px
-  .el-col
-    border-radius 4px
+        line-height 10px
 </style>

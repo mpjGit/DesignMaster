@@ -19,7 +19,8 @@ export default {
       name: 'Login',
       buttons: [
         { text: 'Help', type: 'text' },
-        { text: 'register', type: 'success' },
+        { text: 'Login', type: 'success' },
+        { text: 'register', type: 'primary' },
       ],
     };
   },
