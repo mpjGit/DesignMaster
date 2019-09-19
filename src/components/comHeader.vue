@@ -1,12 +1,13 @@
 <template>
   <div class="container">
     <el-row>
-      <el-col :span="4"><div class='logo-content'>
+      <el-col :span="4"><div class='logo-content' :style="outerStyle">
+          easyDesigner
           <span class="logo iconfont iconzidingyi"></span>
         </div></el-col>
-      <el-col :span="12"><div class="midCross"></div></el-col>
+      <el-col :span="12"><div class="midCross" :style="outerStyle"></div></el-col>
       <el-col :span="8">
-        <div class="button-content">
+        <div class="button-content" :style="outerStyle">
            <el-button v-for="btn in buttons"
                       :type="btn.type"
                       :key="btn.text"
@@ -26,16 +27,20 @@ export default {
       type: Array,
       default: () => [],
     },
+    outerStyle: {
+      type: Object,
+      default: () => {},
+    }
   },
 };
 </script>
 
 <style lang="stylus">
   .logo-content
-    background #666666
     display flex
-    justify-content center
+    justify-content flex-end
     align-items center
+    color #ffffff
     .logo
       height 20px
       border-right 1px solid #ffffff
@@ -44,13 +49,10 @@ export default {
       font-size 30px
       padding 7px
   .midCross
-    background #666666
   .button-content
-    background #666666
   .el-row
     margin-bottom 20px
     .logo-content
-      border-left 1px solid #ffffff
     div
       min-height 55px
       .btn

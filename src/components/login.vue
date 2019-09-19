@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <com-header :buttons="buttons"></com-header>
+  <div class="container" :style="backgroundImage">
+    <div class="header"><com-header :buttons="buttons"></com-header></div>
     <div class="section"></div>
     <div class="footer">
       <button @click="GetUsersData">GetUsersData</button>
@@ -22,6 +22,14 @@ export default {
         { text: 'Login', type: 'success' },
         { text: 'register', type: 'primary' },
       ],
+      backgroundImage: {
+        backgroundImage: "url(" + require("../assets/background.jpg") + ") ",
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '100% 100%',
+      },
+      outerStyle: {
+        opacity: 0.9
+      }
     };
   },
   computed: {
@@ -41,5 +49,10 @@ export default {
 </script>
 
 <style lang="stylus">
-
+.container
+  border-radius 8px
+  .header
+    margin-top 20px
+  .section
+    min-height 800px
 </style>
