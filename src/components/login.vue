@@ -10,6 +10,7 @@
 
 <script>
 import { mapState } from 'vuex';
+import img from '../assets/background.jpg';
 import comHeader from './comHeader';
 
 export default {
@@ -23,13 +24,13 @@ export default {
         { text: 'register', type: 'primary' },
       ],
       backgroundImage: {
-        backgroundImage: "url(" + require("../assets/background.jpg") + ") ",
+        backgroundImage: img,
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100% 100%',
       },
       outerStyle: {
-        opacity: 0.9
-      }
+        opacity: 0.9,
+      },
     };
   },
   computed: {

@@ -48,5 +48,7 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     // linebreaks style
     'linebreak-style': [0, 'error', 'windows'],
+    // global require
+    'global require': 0,
   }
 }

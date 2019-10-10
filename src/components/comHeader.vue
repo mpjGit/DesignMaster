@@ -30,7 +30,7 @@ export default {
     outerStyle: {
       type: Object,
       default: () => {},
-    }
+    },
   },
 };
 </script>
